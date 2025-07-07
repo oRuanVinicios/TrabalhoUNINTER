@@ -1,0 +1,244 @@
+Perfeito, Ruan! A estrutura HTML da sua calculadora está no lugar na seção "Portfólio".
+
+Agora que o HTML está pronto, o próximo passo crucial é estilizar a calculadora com CSS para que ela tenha um visual agradável e funcional. Sem o CSS, ela parecerá apenas um amontoado de botões.
+
+Você vai adicionar o código CSS que eu vou te fornecer ao seu arquivo style.css.
+
+Passo a passo para o CSS da calculadora:
+
+Abra seu arquivo style.css (que deve estar na mesma pasta do index.html).
+
+Copie e cole o código CSS abaixo dentro dele.
+
+CSS
+
+/* Estilos Gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+}
+
+/* Estilos para as seções principais */
+section {
+    background-color: #ffffff;
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajuste a largura conforme preferir */
+    max-width: 800px; /* Largura máxima para não ficar muito esticado */
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+a {
+    color: #007bff; /* Cor azul para links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilos para o cabeçalho e navegação */
+header {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky; /* Menu fixo no topo */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Estilos para o formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no width total */
+}
+
+form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o rodapé */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* ------------------- ESTILOS DA CALCULADORA ------------------- */
+.calculator {
+    width: 300px; /* Largura da calculadora */
+    margin: 40px auto; /* Centraliza a calculadora */
+    background-color: #222; /* Fundo escuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #0f0; /* Cor verde neon para o display */
+    font-size: 2.5em;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding no width */
+    font-family: 'Consolas', monospace; /* Fonte monoespaçada para números */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de botões */
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+.button.clear {
+    background-color: #d9534f; /* Vermelho para o C */
+    grid-column: span 2; /* O botão C ocupa 2 colunas */
+}
+
+.button.clear:hover {
+    background-color: #c9302c;
+}
+
+.button.operator {
+    background-color: #f0ad4e; /* Laranja para operadores */
+}
+
+.button.operator:hover {
+    background-color: #ec971f;
+}
+
+.button.equal {
+    background-color: #5cb85c; /* Verde para o = */
+    grid-column: span 2; /* O botão = ocupa 2 colunas */
+}
+
+.button.equal:hover {
+    background-color: #4cae4c;
+}
+
+.button.zero {
+    grid-column: span 2; /* O botão 0 ocupa 2 colunas */

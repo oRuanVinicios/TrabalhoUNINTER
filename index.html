@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mim">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-mim">
+            <h1>Sobre Mim</h1>
+            <p>
+                Oi! Eu sou o Ruan. Sou uma pessoa bem curiosa, sempre em busca de aprender coisas novas e ter experiências diferentes.
+            </p>
+            <p>
+                Gosto muito de esportes radicais. Adoro a emoção de desafios e a sensação de superar meus próprios limites.
+            </p>
+            <p>
+                Nos fins de semana, sou músico. Tocar me ajuda a relaxar e a expressar minha criatividade.
+            </p>
+            <p>
+                Também faço trabalhos voluntários com frequência. Acredito que é importante ajudar a comunidade e fazer a diferença.
+            </p>
+            <p>
+                Em resumo: Gosto de desafios como o Rapel, gosto de expressar criatividade através da música e me sinto bem em ajudar o proximo!
+            </p>
+            </section>
+
+       <section id="formacao">
+            <h1>Formação Educacional e Idiomas</h1>
+            <h2>Educação Formal</h2>
+            <ul>
+                <li>
+                    <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong><br>
+                    UNINTER - Cursando atualmente
+                </li>
+            </ul>
+
+            <h2>Cursos e Certificações</h2>
+            <ul>
+                <li>
+                    <strong>Programação Orientada a Objetos (POO)</strong><br>
+                    Udemy
+                </li>
+                <li>
+                    <strong>Lógica de Programação e Algoritmos</strong><br>
+                    Udemy
+                </li>
+                <li>
+                    <strong>Desenvolvimento Web Completo</strong><br>
+                    Udemy
+                </li>
+                <li>
+                    <strong>Git e GitHub</strong><br>
+                    Udemy
+                </li>
+                <li>
+                    <strong>Manutenção de Computadores e Hardwares</strong><br>
+                    Udemy
+                </li>
+            </ul>
+
+            <h2>Idiomas</h2>
+            <ul>
+                <li>
+                    <strong>Inglês:</strong> Nível básico/intermediário
+                </li>
+            </ul>
+            </section>
+            <section id="portfolio">
+                <h1>Meu Portfólio</h1>
+                <p>Aqui esta um exercício que fiz recentemente para testar o JavaScript:</p>
+             </section>
+
+              <section id="portfolio">
+            <h1>Meu Portfólio</h1>
+            
+            <p>Aqui está um exemplo prático das minhas habilidades em desenvolvimento web, uma calculadora funcional:</p>
+
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="result" readonly>
+                </div>
+                <div class="buttons">
+                    <button class="button clear" onclick="clearResult()">C</button>
+                    <button class="button operator" onclick="appendToDisplay('/')">/</button>
+                    <button class="button operator" onclick="appendToDisplay('*')">*</button>
+                    <button class="button operator" onclick="deleteLast()">DEL</button>
+                    <button class="button" onclick="appendToDisplay('7')">7</button>
+                    <button class="button" onclick="appendToDisplay('8')">8</button>
+                    <button class="button" onclick="appendToDisplay('9')">9</button>
+                    <button class="button operator" onclick="appendToDisplay('-')">-</button>
+                    <button class="button" onclick="appendToDisplay('4')">4</button>
+                    <button class="button" onclick="appendToDisplay('5')">5</button>
+                    <button class="button" onclick="appendToDisplay('6')">6</button>
+                    <button class="button operator" onclick="appendToDisplay('+')">+</button>
+                    <button class="button" onclick="appendToDisplay('1')">1</button>
+                    <button class="button" onclick="appendToDisplay('2')">2</button>
+                    <button class="button" onclick="appendToDisplay('3')">3</button>
+                    <button class="button equal" onclick="calculateResult()">=</button>
+                    <button class="button zero" onclick="appendToDisplay('0')">0</button>
+                    <button class="button" onclick="appendToDisplay('.')">.</button>
+                </div>
+            </div>
+            <p>Estou sempre em busca de novos desafios e oportunidades para aplicar e expandir minhas habilidades em desenvolvimento web.</p>
+        </section>
+
+        <section id="contato">
+            <h1>Contato</h1>
+            <p>Que ótimo ter voçê por aqui! </p>
+            <p>Deixe abaixo seu contato para uma futura conversa</p>
+            
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <h2>Meus Contatos Diretos</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:oruanvinicios@gmail.com">oruanvinicios@gmail.com</a></li>
+                <li><strong>Telefone:</strong> (11) 91196-7564</li>
+                <li><strong>LinkedIn:</strong> <a href="http://linkedin.com/in/ruan-almeida-99043a252" target="_blank">LinkedIn</a></li>
+            </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ruan. Todos os direitos reservados.</p>
+    </footer>
+
+    </body>
+</html>
