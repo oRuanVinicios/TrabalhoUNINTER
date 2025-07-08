@@ -1,38 +1,40 @@
-Perfeito, Ruan! A estrutura HTML da sua calculadora está no lugar na seção "Portfólio".
-
-Agora que o HTML está pronto, o próximo passo crucial é estilizar a calculadora com CSS para que ela tenha um visual agradável e funcional. Sem o CSS, ela parecerá apenas um amontoado de botões.
-
-Você vai adicionar o código CSS que eu vou te fornecer ao seu arquivo style.css.
-
-Passo a passo para o CSS da calculadora:
-
-Abra seu arquivo style.css (que deve estar na mesma pasta do index.html).
-
-Copie e cole o código CSS abaixo dentro dele.
-
-CSS
-
-/* Estilos Gerais para o corpo da página */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f4f4;
-    margin: 0;
     padding: 20px;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+    box-sizing: border-box;
+    width: 100%;
 }
 
-/* Estilos para as seções principais */
+main section {
+    display: none;
+}
+
+main section#sobre-mim { 
+    display: block; 
+}
+
 section {
     background-color: #ffffff;
     margin: 20px 0;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Ajuste a largura conforme preferir */
-    max-width: 800px; /* Largura máxima para não ficar muito esticado */
+    width: 80%; 
+    max-width: 800px; 
     box-sizing: border-box;
 }
 
@@ -49,7 +51,7 @@ p {
 }
 
 ul {
-    list-style: none; /* Remove os marcadores de lista padrão */
+    list-style: none; 
     padding: 0;
 }
 
@@ -59,22 +61,21 @@ li {
 }
 
 a {
-    color: #007bff; /* Cor azul para links */
-    text-decoration: none; /* Remove o sublinhado padrão */
+    color: #007bff; 
+    text-decoration: none; 
 }
 
 a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
 
-/* Estilos para o cabeçalho e navegação */
 header {
     background-color: #333;
     color: #fff;
     width: 100%;
     padding: 10px 0;
     text-align: center;
-    position: sticky; /* Menu fixo no topo */
+    position: sticky; 
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -105,11 +106,10 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Estilos para o formulário de contato */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaçamento entre os elementos do formulário */
+    gap: 15px; 
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
@@ -131,11 +131,11 @@ form textarea {
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
-    box-sizing: border-box; /* Inclui padding e border no width total */
+    box-sizing: border-box; 
 }
 
 form textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+    resize: vertical;
 }
 
 form button {
@@ -153,24 +153,21 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Estilos para o rodapé */
 footer {
     width: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    margin-top: 20px;
 }
 
-/* ------------------- ESTILOS DA CALCULADORA ------------------- */
 .calculator {
-    width: 300px; /* Largura da calculadora */
-    margin: 40px auto; /* Centraliza a calculadora */
-    background-color: #222; /* Fundo escuro */
+    width: 300px; 
+    margin: 40px auto; 
+    background-color: #222;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
 .display {
@@ -181,20 +178,20 @@ footer {
     width: 100%;
     height: 60px;
     background-color: #333;
-    color: #0f0; /* Cor verde neon para o display */
+    color: #0f0; 
     font-size: 2.5em;
     text-align: right;
     border: none;
     border-radius: 5px;
     padding: 10px;
-    box-sizing: border-box; /* Inclui padding no width */
-    font-family: 'Consolas', monospace; /* Fonte monoespaçada para números */
+    box-sizing: border-box; 
+    font-family: 'Consolas', monospace; 
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas de botões */
-    gap: 10px; /* Espaçamento entre os botões */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
 }
 
 .button {
@@ -215,8 +212,8 @@ footer {
 }
 
 .button.clear {
-    background-color: #d9534f; /* Vermelho para o C */
-    grid-column: span 2; /* O botão C ocupa 2 colunas */
+    background-color: #d9534f; 
+    grid-column: span 2; 
 }
 
 .button.clear:hover {
@@ -224,7 +221,7 @@ footer {
 }
 
 .button.operator {
-    background-color: #f0ad4e; /* Laranja para operadores */
+    background-color: #f0ad4e; 
 }
 
 .button.operator:hover {
@@ -232,13 +229,34 @@ footer {
 }
 
 .button.equal {
-    background-color: #5cb85c; /* Verde para o = */
-    grid-column: span 2; /* O botão = ocupa 2 colunas */
-}
+    background-color: #145fff; 
+    grid-column: span 1; 
 
 .button.equal:hover {
-    background-color: #4cae4c;
+    background-color: #000000;
 }
 
 .button.zero {
-    grid-column: span 2; /* O botão 0 ocupa 2 colunas */
+    grid-column: span 2; 
+}
+
+#calculator-container {
+    display: none;
+}
+
+#show-calculator-btn {
+    margin: 20px auto; 
+    display: block; 
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#show-calculator-btn:hover {
+    background-color: #218838;
+}
