@@ -1,3 +1,4 @@
+/* Estilos Gerais do Corpo da Página e Layout Principal */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -19,6 +20,7 @@ main {
     width: 100%;
 }
 
+/* Esconde todas as seções por padrão e mostra a inicial */
 main section {
     display: none;
 }
@@ -27,6 +29,7 @@ main section#sobre-mim {
     display: block; 
 }
 
+/* Estilos para as Seções de Conteúdo */
 section {
     background-color: #ffffff;
     margin: 20px 0;
@@ -69,6 +72,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Estilos do Cabeçalho e Navegação Principal */
 header {
     background-color: #333;
     color: #fff;
@@ -106,6 +110,7 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
+/* Estilos do Formulário de Contato */
 form {
     display: flex;
     flex-direction: column;
@@ -153,6 +158,7 @@ form button:hover {
     background-color: #0056b3;
 }
 
+/* Estilos do Rodapé */
 footer {
     width: 100%;
     background-color: #333;
@@ -161,6 +167,7 @@ footer {
     padding: 15px 0;
 }
 
+/* Estilos da Calculadora */
 .calculator {
     width: 300px; 
     margin: 40px auto; 
@@ -230,7 +237,9 @@ footer {
 
 .button.equal {
     background-color: #145fff; 
-    grid-column: span 1; 
+    grid-column: span 2; 
+    
+}
 
 .button.equal:hover {
     background-color: #000000;
@@ -240,8 +249,9 @@ footer {
     grid-column: span 2; 
 }
 
+/* Estilos do Container e Botão da Calculadora (Portfólio) */
 #calculator-container {
-    display: none;
+    display: none; /* Inicia oculto */
 }
 
 #show-calculator-btn {
